@@ -1,1 +1,19 @@
-
+<body>
+    <div id="clock">
+        </div>
+    <script>
+        var now=new Date();
+        localtime=now.toString();
+        document.write("Local time:"+localtime+"<br>");
+        function InNgayVaGio() {
+            var now=new Date();
+            hours=now.getHours();
+            mins=now.getMinutes();
+            secs=now.getSeconds();
+            theDiv =document.getElementById("clock");
+            theDiv.innerHTML=hours+":"+mins+":"+secs;
+            Window.setInterval(InNgayVaGio,1000);
+        }
+        InNgayVaGio();
+    </script>
+</body>
